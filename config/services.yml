@@ -1,0 +1,11 @@
+services:
+    avathar.bbguild_swtor.installer:
+        class: avathar\bbguild_swtor\game\swtor_installer
+
+    avathar.bbguild_swtor.provider:
+        class: avathar\bbguild_swtor\game\swtor_provider
+        arguments:
+            - '@avathar.bbguild_swtor.installer'
+            - '@ext.manager'
+        tags:
+            - { name: bbguild.game_provider }
