@@ -111,6 +111,8 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 8,  'race_faction_id' => 3, 'image_female' => 'swtor_redsith_female',   'image_male' => 'swtor_redsith_male');
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 9,  'race_faction_id' => 3, 'image_female' => 'swtor_cathar_female',    'image_male' => 'swtor_cathar_male');
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 10, 'race_faction_id' => 3, 'image_female' => 'swtor_cyborg_female',    'image_male' => 'swtor_cyborg_male');
+		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 11, 'race_faction_id' => 1, 'image_female' => 'swtor_togruta_female',   'image_male' => 'swtor_togruta_male');
+		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 12, 'race_faction_id' => 1, 'image_female' => 'swtor_nautolan_female',  'image_male' => 'swtor_nautolan_male');
 		$db->sql_multi_insert($this->table('bb_races_table'), $sql_ary);
 		unset($sql_ary);
 
@@ -129,6 +131,8 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8,  'language' => 'en', 'attribute' => 'race', 'name' => 'Red Siths',  'name_short' => 'Siths');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 9,  'language' => 'en', 'attribute' => 'race', 'name' => 'Cathar',     'name_short' => 'Cathar');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 10, 'language' => 'en', 'attribute' => 'race', 'name' => 'Cyborg',     'name_short' => 'Cyborg');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 11, 'language' => 'en', 'attribute' => 'race', 'name' => 'Togruta',    'name_short' => 'Togruta');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 12, 'language' => 'en', 'attribute' => 'race', 'name' => 'Nautolan',   'name_short' => 'Nautolan');
 
 		// de
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 0,  'language' => 'de', 'attribute' => 'race', 'name' => 'Unbekannt',          'name_short' => 'T7-01');
@@ -142,6 +146,8 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8,  'language' => 'de', 'attribute' => 'race', 'name' => 'Reinblütige Sith',   'name_short' => 'Sith');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 9,  'language' => 'de', 'attribute' => 'race', 'name' => 'Cathar',             'name_short' => 'Cathar');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 10, 'language' => 'de', 'attribute' => 'race', 'name' => 'Cyborg',             'name_short' => 'Cyborg');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 11, 'language' => 'de', 'attribute' => 'race', 'name' => 'Togruta',            'name_short' => 'Togruta');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 12, 'language' => 'de', 'attribute' => 'race', 'name' => 'Nautolaner',         'name_short' => 'Nautolan');
 
 		// fr
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 0,  'language' => 'fr', 'attribute' => 'race', 'name' => 'Inconnu',            'name_short' => 'T7-01');
@@ -155,6 +161,8 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8,  'language' => 'fr', 'attribute' => 'race', 'name' => 'Sith au sang pur',   'name_short' => 'Sith');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 9,  'language' => 'fr', 'attribute' => 'race', 'name' => 'Cathar',             'name_short' => 'Cathar');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 10, 'language' => 'fr', 'attribute' => 'race', 'name' => 'Cyborg',             'name_short' => 'Cyborg');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 11, 'language' => 'fr', 'attribute' => 'race', 'name' => 'Togruta',            'name_short' => 'Togruta');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 12, 'language' => 'fr', 'attribute' => 'race', 'name' => 'Nautolan',           'name_short' => 'Nautolan');
 
 		$db->sql_multi_insert($this->table('bb_language_table'), $sql_ary);
 	}
