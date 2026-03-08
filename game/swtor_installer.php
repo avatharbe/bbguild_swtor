@@ -20,15 +20,14 @@ class swtor_installer extends abstract_game_install
 	 */
 	protected function install_factions()
 	{
-		global $db;
 
-		$db->sql_query('DELETE FROM ' . $this->table('bb_factions_table') . " WHERE game_id = '" . $db->sql_escape($this->game_id) . "'");
+		$this->db->sql_query('DELETE FROM ' . $this->table('bb_factions_table') . " WHERE game_id = '" . $this->db->sql_escape($this->game_id) . "'");
 		$sql_ary = array();
 		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 1, 'faction_name' => 'Galactic Republic');
 		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 2, 'faction_name' => 'Jedi Order');
 		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 3, 'faction_name' => 'Sith Empire');
 		$sql_ary[] = array('game_id' => $this->game_id, 'faction_id' => 4, 'faction_name' => 'Sith Lords');
-		$db->sql_multi_insert($this->table('bb_factions_table'), $sql_ary);
+		$this->db->sql_multi_insert($this->table('bb_factions_table'), $sql_ary);
 	}
 
 	/**
@@ -36,9 +35,8 @@ class swtor_installer extends abstract_game_install
 	 */
 	protected function install_classes()
 	{
-		global $db;
 
-		$db->sql_query('DELETE FROM ' . $this->table('bb_classes_table') . " WHERE game_id = '" . $db->sql_escape($this->game_id) . "'");
+		$this->db->sql_query('DELETE FROM ' . $this->table('bb_classes_table') . " WHERE game_id = '" . $this->db->sql_escape($this->game_id) . "'");
 		$sql_ary = array();
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 0, 'class_faction_id' => 1, 'class_armor_type' => 'HEAVY',     'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#999999', 'imagename' => 'swtor_unknown');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 1, 'class_faction_id' => 1, 'class_armor_type' => 'HEAVY',     'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#66CCFF', 'imagename' => 'swtor_trooper');
@@ -49,10 +47,10 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 6, 'class_faction_id' => 4, 'class_armor_type' => 'LEATHER',   'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#FF6600', 'imagename' => 'swtor_warrior');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 7, 'class_faction_id' => 3, 'class_armor_type' => 'AUGMENTED', 'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#996699', 'imagename' => 'swtor_agent');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 8, 'class_faction_id' => 4, 'class_armor_type' => 'ROBE',      'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#660033', 'imagename' => 'swtor_inquisitor');
-		$db->sql_multi_insert($this->table('bb_classes_table'), $sql_ary);
+		$this->db->sql_multi_insert($this->table('bb_classes_table'), $sql_ary);
 		unset($sql_ary);
 
-		$db->sql_query('DELETE FROM ' . $this->table('bb_language_table') . " WHERE game_id = '" . $db->sql_escape($this->game_id) . "' AND attribute = 'class'");
+		$this->db->sql_query('DELETE FROM ' . $this->table('bb_language_table') . " WHERE game_id = '" . $this->db->sql_escape($this->game_id) . "' AND attribute = 'class'");
 		$sql_ary = array();
 
 		// en
@@ -88,7 +86,7 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 7, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Chasseur de Primes',  'name_short' => 'Chasseur');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Agent Imperial',      'name_short' => 'Agent');
 
-		$db->sql_multi_insert($this->table('bb_language_table'), $sql_ary);
+		$this->db->sql_multi_insert($this->table('bb_language_table'), $sql_ary);
 	}
 
 	/**
@@ -96,9 +94,8 @@ class swtor_installer extends abstract_game_install
 	 */
 	protected function install_races()
 	{
-		global $db;
 
-		$db->sql_query('DELETE FROM ' . $this->table('bb_races_table') . " WHERE game_id = '" . $db->sql_escape($this->game_id) . "'");
+		$this->db->sql_query('DELETE FROM ' . $this->table('bb_races_table') . " WHERE game_id = '" . $this->db->sql_escape($this->game_id) . "'");
 		$sql_ary = array();
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 0,  'race_faction_id' => 1, 'image_female' => ' ',                     'image_male' => ' ');
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 1,  'race_faction_id' => 2, 'image_female' => 'swtor_miraluka_female',  'image_male' => 'swtor_miraluka_male');
@@ -113,10 +110,10 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 10, 'race_faction_id' => 3, 'image_female' => 'swtor_cyborg_female',    'image_male' => 'swtor_cyborg_male');
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 11, 'race_faction_id' => 1, 'image_female' => 'swtor_togruta_female',   'image_male' => 'swtor_togruta_male');
 		$sql_ary[] = array('game_id' => $this->game_id, 'race_id' => 12, 'race_faction_id' => 1, 'image_female' => 'swtor_nautolan_female',  'image_male' => 'swtor_nautolan_male');
-		$db->sql_multi_insert($this->table('bb_races_table'), $sql_ary);
+		$this->db->sql_multi_insert($this->table('bb_races_table'), $sql_ary);
 		unset($sql_ary);
 
-		$db->sql_query('DELETE FROM ' . $this->table('bb_language_table') . " WHERE game_id = '" . $db->sql_escape($this->game_id) . "' AND attribute = 'race'");
+		$this->db->sql_query('DELETE FROM ' . $this->table('bb_language_table') . " WHERE game_id = '" . $this->db->sql_escape($this->game_id) . "' AND attribute = 'race'");
 		$sql_ary = array();
 
 		// en
@@ -164,6 +161,6 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 11, 'language' => 'fr', 'attribute' => 'race', 'name' => 'Togruta',            'name_short' => 'Togruta');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 12, 'language' => 'fr', 'attribute' => 'race', 'name' => 'Nautolan',           'name_short' => 'Nautolan');
 
-		$db->sql_multi_insert($this->table('bb_language_table'), $sql_ary);
+		$this->db->sql_multi_insert($this->table('bb_language_table'), $sql_ary);
 	}
 }
