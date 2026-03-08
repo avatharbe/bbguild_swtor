@@ -54,13 +54,13 @@ class data extends \phpbb\db\migration\container_aware_migration
 
 	public function seed_game_data()
 	{
-		$installer = $this->container->get('avathar.bbguild_swtor.installer');
+		$installer = $this->get_installer();
 		$installer->install($this->get_table_names(), 'swtor', 'Star Wars: The Old Republic', '', '', 'us');
 	}
 
 	public function remove_game_data()
 	{
-		$installer = $this->container->get('avathar.bbguild_swtor.installer');
+		$installer = $this->get_installer();
 		$installer->uninstall($this->get_table_names(), 'swtor', 'Star Wars: The Old Republic');
 	}
 
@@ -75,5 +75,15 @@ class data extends \phpbb\db\migration\container_aware_migration
 			'bb_language_table'  => $this->table_prefix . 'bb_language',
 			'bb_players_table'   => $this->table_prefix . 'bb_players',
 		];
+	}
+
+	private function get_installer()
+	{
+		return new \avathar\bbguild_swtor\game\swtor_installer(
+			$this->container->get('dbal.conn'),
+			$this->container->get('cache'),
+			$this->container->get('config'),
+			$this->container->get('user')
+		);
 	}
 }
