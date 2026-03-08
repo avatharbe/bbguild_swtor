@@ -1,6 +1,11 @@
 services:
     avathar.bbguild_swtor.installer:
         class: avathar\bbguild_swtor\game\swtor_installer
+        arguments:
+            - '@dbal.conn'
+            - '@cache'
+            - '@config'
+            - '@user'
 
     avathar.bbguild_swtor.provider:
         class: avathar\bbguild_swtor\game\swtor_provider
