@@ -42,7 +42,7 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 1, 'class_faction_id' => 1, 'class_armor_type' => 'HEAVY',     'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#66CCFF', 'imagename' => 'swtor_trooper');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 2, 'class_faction_id' => 1, 'class_armor_type' => 'LEATHER',   'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#AFDCEC', 'imagename' => 'swtor_smuggler');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 3, 'class_faction_id' => 2, 'class_armor_type' => 'AUGMENTED', 'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#437C17', 'imagename' => 'swtor_jedi');
-		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 4, 'class_faction_id' => 2, 'class_armor_type' => 'ROBE',      'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#663333', 'imagename' => 'swtor_consul');
+		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 4, 'class_faction_id' => 2, 'class_armor_type' => 'ROBE',      'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#66CC66', 'imagename' => 'swtor_consul');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 5, 'class_faction_id' => 3, 'class_armor_type' => 'HEAVY',     'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#CC0033', 'imagename' => 'swtor_hunter');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 6, 'class_faction_id' => 4, 'class_armor_type' => 'LEATHER',   'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#FF6600', 'imagename' => 'swtor_warrior');
 		$sql_ary[] = array('game_id' => $this->game_id, 'class_id' => 7, 'class_faction_id' => 3, 'class_armor_type' => 'AUGMENTED', 'class_min_level' => 1, 'class_max_level' => 55, 'colorcode' => '#996699', 'imagename' => 'swtor_agent');
@@ -59,10 +59,10 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 2, 'language' => 'en', 'attribute' => 'class', 'name' => 'Smuggler',        'name_short' => 'Smuggler');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 3, 'language' => 'en', 'attribute' => 'class', 'name' => 'Jedi Knight',     'name_short' => 'Jedi');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 4, 'language' => 'en', 'attribute' => 'class', 'name' => 'Jedi Consular',   'name_short' => 'Consul');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 5, 'language' => 'en', 'attribute' => 'class', 'name' => 'Sith Inquisitor', 'name_short' => 'Inquisitor');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 5, 'language' => 'en', 'attribute' => 'class', 'name' => 'Bounty Hunter',   'name_short' => 'Hunter');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 6, 'language' => 'en', 'attribute' => 'class', 'name' => 'Sith Warrior',    'name_short' => 'Warrior');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 7, 'language' => 'en', 'attribute' => 'class', 'name' => 'Bounty Hunter',   'name_short' => 'Hunter');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8, 'language' => 'en', 'attribute' => 'class', 'name' => 'Imperial Agent',  'name_short' => 'Agent');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 7, 'language' => 'en', 'attribute' => 'class', 'name' => 'Imperial Agent',  'name_short' => 'Agent');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8, 'language' => 'en', 'attribute' => 'class', 'name' => 'Sith Inquisitor', 'name_short' => 'Inquisitor');
 
 		// de
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 0, 'language' => 'de', 'attribute' => 'class', 'name' => 'Unbekannt',        'name_short' => 'Unbekannt');
@@ -70,10 +70,10 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 2, 'language' => 'de', 'attribute' => 'class', 'name' => 'Schmuggler',        'name_short' => 'Schmuggler');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 3, 'language' => 'de', 'attribute' => 'class', 'name' => 'Jedi-Ritter',       'name_short' => 'Ritter');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 4, 'language' => 'de', 'attribute' => 'class', 'name' => 'Jedi Botschafter',  'name_short' => 'Botschafter');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 5, 'language' => 'de', 'attribute' => 'class', 'name' => 'Sith Inquisitor',   'name_short' => 'Inquisitor');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 5, 'language' => 'de', 'attribute' => 'class', 'name' => 'Kopfgeldjäger',     'name_short' => 'Kopfgeldjäger');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 6, 'language' => 'de', 'attribute' => 'class', 'name' => 'Sith Krieger',      'name_short' => 'Krieger');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 7, 'language' => 'de', 'attribute' => 'class', 'name' => 'Kopfgeldjäger',     'name_short' => 'Kopfgeldjäger');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8, 'language' => 'de', 'attribute' => 'class', 'name' => 'Imperialer Agent',  'name_short' => 'Imperialer Agent');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 7, 'language' => 'de', 'attribute' => 'class', 'name' => 'Imperialer Agent',  'name_short' => 'Imperialer Agent');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8, 'language' => 'de', 'attribute' => 'class', 'name' => 'Sith Inquisitor',   'name_short' => 'Inquisitor');
 
 		// fr
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 0, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Inconnu',            'name_short' => 'Inconnu');
@@ -81,10 +81,10 @@ class swtor_installer extends abstract_game_install
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 2, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Contrebandier',       'name_short' => 'Contrebandier');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 3, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Chevalier Jedi',      'name_short' => 'Chevalier');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 4, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Jedi Consulaire',     'name_short' => 'Consulaire');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 5, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Inquisiteur Sith',    'name_short' => 'Inquisiteur');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 5, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Chasseur de Primes',  'name_short' => 'Chasseur');
 		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 6, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Guerrier Sith',       'name_short' => 'Guerrier');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 7, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Chasseur de Primes',  'name_short' => 'Chasseur');
-		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Agent Imperial',      'name_short' => 'Agent');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 7, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Agent Imperial',      'name_short' => 'Agent');
+		$sql_ary[] = array('game_id' => $this->game_id, 'attribute_id' => 8, 'language' => 'fr', 'attribute' => 'class', 'name' => 'Inquisiteur Sith',    'name_short' => 'Inquisiteur');
 
 		$this->db->sql_multi_insert($this->table('bb_language_table'), $sql_ary);
 	}
