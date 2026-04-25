@@ -79,4 +79,14 @@ class swtor_provider implements game_provider_interface
 	{
 		return array();
 	}
+
+	public function get_armor_types(): array
+	{
+		return array(
+			'ROBE'      => 'Robes',
+			'LEATHER'   => 'Leather',
+			'AUGMENTED' => 'Augmented',
+			'HEAVY'     => 'Heavy',
+		);
+	}
 }
