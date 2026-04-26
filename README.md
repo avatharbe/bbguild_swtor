@@ -1,5 +1,7 @@
 # bbGuild - Star Wars: The Old Republic
 
+[![Tests](https://github.com/avatharbe/bbguild_swtor/actions/workflows/tests.yml/badge.svg)](https://github.com/avatharbe/bbguild_swtor/actions/workflows/tests.yml)
+
 Game plugin that adds Star Wars: The Old Republic support to [bbGuild](https://github.com/avandenberghe/bbguild).
 
 ## Features
