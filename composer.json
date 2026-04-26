@@ -1,5 +1,5 @@
 {
-  "name": "avathar/bbguild_swtor",
+  "name": "avathar/bbguild-swtor",
   "type": "phpbb-extension",
   "description": "Star Wars: The Old Republic game plugin for bbGuild. Provides SWTOR classes, races, and factions.",
   "homepage": "https://github.com/avandenberghe/bbguild",
