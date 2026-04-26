@@ -27,7 +27,7 @@
     "version-check": {
       "host": "www.avathar.be",
       "directory": "/versioncheck",
-      "filename": "bbguild_swtor.json",
+      "filename": "bbguild-swtor.json",
       "ssl": true
     }
   }
