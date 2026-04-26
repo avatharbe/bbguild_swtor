@@ -1,6 +1,6 @@
 # bbGuild - Star Wars: The Old Republic
 
-[![Tests](https://github.com/avatharbe/bbguild_swtor/actions/workflows/tests.yml/badge.svg)](https://github.com/avatharbe/bbguild_swtor/actions/workflows/tests.yml)
+[![Tests](https://github.com/avatharbe/bbguildswtor/actions/workflows/tests.yml/badge.svg)](https://github.com/avatharbe/bbguildswtor/actions/workflows/tests.yml)
 
 Game plugin that adds Star Wars: The Old Republic support to [bbGuild](https://github.com/avandenberghe/bbguild).
 
@@ -21,7 +21,7 @@ Game plugin that adds Star Wars: The Old Republic support to [bbGuild](https://g
 ## Installation
 
 1. Ensure bbGuild core (`avathar/bbguild`) is installed and enabled.
-2. Copy the `bbguild_swtor` folder to `/ext/avathar/bbguild_swtor/`.
+2. Copy the `bbguildswtor` folder to `/ext/avathar/bbguildswtor/`.
 3. Navigate in the ACP to `Customise -> Manage extensions`.
 4. Look for `bbGuild - SWTOR` under Disabled Extensions and click `Enable`.
 5. Go to ACP > bbGuild > Games and install the **Star Wars: The Old Republic** game.
@@ -30,7 +30,7 @@ Game plugin that adds Star Wars: The Old Republic support to [bbGuild](https://g
 
 1. Navigate in the ACP to `Customise -> Extension Management -> Extensions`.
 2. Find `bbGuild - SWTOR` under Enabled Extensions and click `Disable`.
-3. To permanently uninstall, click `Delete Data` and then delete the `/ext/avathar/bbguild_swtor` folder.
+3. To permanently uninstall, click `Delete Data` and then delete the `/ext/avathar/bbguildswtor` folder.
 
 **Note:** Disabling the extension does not delete existing guild or player data. Your roster and player records remain intact in bbGuild core.
 

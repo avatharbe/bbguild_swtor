@@ -5,11 +5,11 @@
  * @license GNU General Public License, version 2 (GPL-2.0)
  */
 
-namespace avathar\bbguild_swtor\tests\game;
+namespace avathar\bbguildswtor\tests\game;
 
 use PHPUnit\Framework\TestCase;
-use avathar\bbguild_swtor\game\swtor_provider;
-use avathar\bbguild_swtor\game\swtor_installer;
+use avathar\bbguildswtor\game\swtor_provider;
+use avathar\bbguildswtor\game\swtor_installer;
 
 class swtor_provider_test extends TestCase
 {
@@ -28,7 +28,7 @@ class swtor_provider_test extends TestCase
 			->disableOriginalConstructor()
 			->getMock();
 		$ext_manager->method('get_extension_path')
-			->willReturn('ext/avathar/bbguild_swtor/');
+			->willReturn('ext/avathar/bbguildswtor/');
 
 		$this->provider = new swtor_provider($installer, $ext_manager);
 	}
@@ -56,7 +56,7 @@ class swtor_provider_test extends TestCase
 
 	public function test_images_path(): void
 	{
-		$this->assertStringContainsString('bbguild_swtor', $this->provider->get_images_path());
+		$this->assertStringContainsString('bbguildswtor', $this->provider->get_images_path());
 		$this->assertStringEndsWith('images/', $this->provider->get_images_path());
 	}
 
